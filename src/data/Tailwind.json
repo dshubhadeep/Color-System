@@ -1,0 +1,69 @@
+{
+  "url": "https://tailwindcss.com/docs/customizing-colors/#default-color-palette",
+  "palette": [
+    {
+      "color": "gray",
+      "swatch": [
+        {
+          "hex": "#F7FAFC"
+        },
+        {
+          "hex": "#EDF2F7"
+        },
+        {
+          "hex": "#E2E8F0"
+        },
+        {
+          "hex": "#CBD5E0"
+        },
+        {
+          "hex": "#A0AEC0"
+        },
+        {
+          "hex": "#718096"
+        },
+        {
+          "hex": "#4A5568"
+        },
+        {
+          "hex": "#2D3748"
+        },
+        {
+          "hex": "#1A202C"
+        }
+      ]
+    },
+    {
+      "color": "red",
+      "swatch": [
+        {
+          "hex": "#FFF5F5"
+        },
+        {
+          "hex": "#FED7D7"
+        },
+        {
+          "hex": "#FEB2B2"
+        },
+        {
+          "hex": "#FC8181"
+        },
+        {
+          "hex": "#F56565"
+        },
+        {
+          "hex": "#E53E3E"
+        },
+        {
+          "hex": "#C53030"
+        },
+        {
+          "hex": "#9B2C2C"
+        },
+        {
+          "hex": "#742A2A"
+        }
+      ]
+    }
+  ]
+}
