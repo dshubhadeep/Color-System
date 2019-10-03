@@ -24,10 +24,11 @@ export const query = graphql`
     dataJson(fields: { slug: { eq: $slug } }) {
       name
       url
-      palette {
+      palettes {
         color
         swatch {
           hex
+          rgb
         }
       }
     }

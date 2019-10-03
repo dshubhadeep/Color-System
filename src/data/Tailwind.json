@@ -1,36 +1,45 @@
 {
   "name": "Tailwind",
   "url": "https://tailwindcss.com/docs/customizing-colors/#default-color-palette",
-  "palette": [
+  "palettes": [
     {
       "color": "gray",
       "swatch": [
         {
-          "hex": "#F7FAFC"
+          "hex": "#F7FAFC",
+          "rgb": "rgb(247,250,252)"
         },
         {
-          "hex": "#EDF2F7"
+          "hex": "#EDF2F7",
+          "rgb": "rgb(237,242,247)"
         },
         {
-          "hex": "#E2E8F0"
+          "hex": "#E2E8F0",
+          "rgb": "rgb(226,232,240)"
         },
         {
-          "hex": "#CBD5E0"
+          "hex": "#CBD5E0",
+          "rgb": "rgb(203,213,224)"
         },
         {
-          "hex": "#A0AEC0"
+          "hex": "#A0AEC0",
+          "rgb": "rgb(160,174,192)"
         },
         {
-          "hex": "#718096"
+          "hex": "#718096",
+          "rgb": "rgb(113,128,150)"
         },
         {
-          "hex": "#4A5568"
+          "hex": "#4A5568",
+          "rgb": "rgb(74,85,104)"
         },
         {
-          "hex": "#2D3748"
+          "hex": "#2D3748",
+          "rgb": "rgb(45,55,72)"
         },
         {
-          "hex": "#1A202C"
+          "hex": "#1A202C",
+          "rgb": "rgb(26,32,44)"
         }
       ]
     },
@@ -38,31 +47,40 @@
       "color": "red",
       "swatch": [
         {
-          "hex": "#FFF5F5"
+          "hex": "#FFF5F5",
+          "rgb": "rgb(255,245,245)"
         },
         {
-          "hex": "#FED7D7"
+          "hex": "#FED7D7",
+          "rgb": "rgb(254,215,215)"
         },
         {
-          "hex": "#FEB2B2"
+          "hex": "#FEB2B2",
+          "rgb": "rgb(254,178,178)"
         },
         {
-          "hex": "#FC8181"
+          "hex": "#FC8181",
+          "rgb": "rgb(252,129,129)"
         },
         {
-          "hex": "#F56565"
+          "hex": "#F56565",
+          "rgb": "rgb(245,101,101)"
         },
         {
-          "hex": "#E53E3E"
+          "hex": "#E53E3E",
+          "rgb": "rgb(229,62,62)"
         },
         {
-          "hex": "#C53030"
+          "hex": "#C53030",
+          "rgb": "rgb(197,48,48)"
         },
         {
-          "hex": "#9B2C2C"
+          "hex": "#9B2C2C",
+          "rgb": "rgb(155,44,44)"
         },
         {
-          "hex": "#742A2A"
+          "hex": "#742A2A",
+          "rgb": "rgb(116,42,42)"
         }
       ]
     }
