@@ -1,13 +1,17 @@
 import React from "react"
 
-const paletteListItem = ({ palette }) => {
-  return (
-    <div className="p-3">
+import SwatchList from "../swatchList"
+
+const paletteListItem = ({ palette }) => (
+  <div className="p-5">
+    <div>
       <h2 className="text-xl font-semibold text-gray-800 tracking-wide text-center capitalize">
         {palette.color}
       </h2>
     </div>
-  )
-}
+
+    <SwatchList swatches={palette.swatch} />
+  </div>
+)
 
 export default paletteListItem
