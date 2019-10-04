@@ -1,0 +1,14 @@
+.palette-container {
+  margin: 1.5em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  row-gap: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .palette-container {
+    margin: 2.2em;
+    grid-template-columns: 1fr;
+  }
+}
