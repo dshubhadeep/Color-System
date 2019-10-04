@@ -1,0 +1,13 @@
+.system-list-container {
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .system-list-container {
+    margin: 2.2em;
+    grid-template-columns: 1fr;
+  }
+}

@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import PaletteList from "../components/palette/paletteList"
+import PaletteList from "../components/paletteList"
 import SEO from "../components/seo"
 
 const ColorSystem = ({ data }) => {

@@ -2,16 +2,11 @@ import React from "react"
 
 import SystemListItem from "./systemListItem"
 
-const styles = {
-  display: "grid",
-  gridTemplateColumns: "repeat(3,1fr)",
-  gridGap: "40px",
-  marginTop: "32px",
-}
+import "./systemList.css"
 
 const SystemList = ({ nodes }) => {
   return (
-    <div style={styles}>
+    <div className="system-list-container">
       {nodes.map(el => {
         return <SystemListItem key={el.node.parent.id} node={el.node} />
       })}
