@@ -4,6 +4,10 @@ body {
   background: #edf2f7;
 }
 
+.toast-progress {
+  background: #1a202c !important;
+}
+
 @tailwind base;
 
 @tailwind components;
