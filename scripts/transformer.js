@@ -16,7 +16,7 @@ for (let file of files) {
 
   console.log(`🎨 Found ${json.palettes.length} palette(s).`)
 
-  const palettes = json.palettes.map(palette => {
+  const palettes = json.palettes.map((palette, index) => {
     const swatch = palette.swatch.map(({ hex }) => {
       return {
         hex,
@@ -24,11 +24,13 @@ for (let file of files) {
       }
     })
 
+    console.log(`  ✔ Transformed swatch ${index + 1} - ${palette.color}`)
+
     return { ...palette, swatch }
   })
 
   json = { ...json, palettes }
 
   writeFileSync(filePath, JSON.stringify(json, null, 2), "utf-8")
-  console.log(`✔ Transformed ${file}.\n`)
+  console.log(`✔ Updated ${file}.\n`)
 }

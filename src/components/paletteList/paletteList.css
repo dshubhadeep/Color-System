@@ -7,7 +7,7 @@
 
 @media screen and (max-width: 768px) {
   .palette-container {
-    margin: 1.8em;
+    margin: 0.8em;
     grid-template-columns: 1fr;
   }
 }
