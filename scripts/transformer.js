@@ -16,6 +16,18 @@ const convertHexToRGB = color => {
   return `rgb(${r},${g},${b})`
 }
 
+const convertRGBToHex = color => {
+  let [r, g, b] = color
+    .slice(4, color.length - 1)
+    .split(",")
+    .map(c => Number(c).toString(16))
+    .map(c => (c.length == 1 ? `${0}${c}` : c))
+
+  let hex = `#${r}${g}${b}`
+
+  return hex.toUpperCase()
+}
+
 const dataPath = "./src/data"
 const files = readdirSync(dataPath, "utf-8")
 
@@ -29,10 +41,16 @@ for (let file of files) {
   console.log(`🎨 Found ${json.palettes.length} palette(s).`)
 
   const palettes = json.palettes.map((palette, index) => {
-    const swatch = palette.swatch.map(({ hex }) => {
+    const swatch = palette.swatch.map(({ hex, rgb }) => {
+      if (hex) {
+        rgb = convertHexToRGB(hex)
+      } else {
+        hex = convertRGBToHex(rgb)
+      }
+
       return {
         hex,
-        rgb: convertHexToRGB(hex),
+        rgb,
       }
     })
 
