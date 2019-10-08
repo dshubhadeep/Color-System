@@ -1,7 +1,24 @@
-// Transforms data files by adding a rgb property to them
+/**
+ * Transforms data files by adding a rgb/hex property to them
+ * Sort the swatch on basis of luminance so that lighter color appears first
+ * Sorts the palettes according to increasing length of swatches
+ */
 
-const { readdirSync, readFileSync, writeFileSync } = require("fs")
-const { join } = require("path")
+const { readdirSync, readFileSync, writeFileSync, statSync } = require("fs")
+const { join, resolve } = require("path")
+
+const filePathArg = process.argv[2]
+  ? resolve(process.argv[2])
+  : resolve(join("src", "data"))
+
+const getFilePaths = filePathArg => {
+  const stats = statSync(filePathArg)
+
+  if (stats.isFile()) return [filePathArg]
+
+  const files = readdirSync(filePathArg)
+  return files.map(file => join(filePathArg, file))
+}
 
 const convertHexToRGB = color => {
   const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i
@@ -28,14 +45,23 @@ const convertRGBToHex = color => {
   return hex.toUpperCase()
 }
 
-const dataPath = "./src/data"
-const files = readdirSync(dataPath, "utf-8")
+const getLuminance = rgbColor => {
+  const [r, g, b] = rgbColor
+    .slice(4, rgbColor.length - 1)
+    .split(",")
+    .map(v => parseInt(v))
+
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b
+}
+
+const files = getFilePaths(filePathArg)
 
 for (let file of files) {
-  console.log(`📖 Reading ${file}.`)
+  const fileName = file.slice(file.lastIndexOf("/") + 1)
 
-  const filePath = join(dataPath, file)
-  const data = readFileSync(filePath, "utf-8")
+  console.log(`📖 Reading ${fileName}.`)
+
+  const data = readFileSync(file, "utf-8")
   let json = JSON.parse(data)
 
   console.log(`🎨 Found ${json.palettes.length} palette(s).`)
@@ -54,13 +80,19 @@ for (let file of files) {
       }
     })
 
+    // Sort swatch on basis of luminance (lighter color will be first)
+    swatch.sort((s1, s2) => getLuminance(s2.rgb) - getLuminance(s1.rgb))
+
     console.log(`  ✔ Transformed swatch ${index + 1} - ${palette.color}`)
 
     return { ...palette, swatch }
   })
 
+  // Sort palete on swatch length (asc)
+  palettes.sort((p1, p2) => p1.swatch.length - p2.swatch.length)
+
   json = { ...json, palettes }
 
-  writeFileSync(filePath, JSON.stringify(json, null, 2), "utf-8")
-  console.log(`✔ Updated ${file}.\n`)
+  writeFileSync(file, JSON.stringify(json, null, 2), "utf-8")
+  console.log(`✔ Updated ${fileName}.\n`)
 }
