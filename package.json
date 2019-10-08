@@ -32,13 +32,14 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "npm run pre-build && gatsby build",
     "develop": "gatsby develop -p 3000",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "transform:data": "node scripts/transformer",
-    "validate:data": "node scripts/validator"
+    "validate:data": "node scripts/validator",
+    "pre-build": "npm run transform:data && npm run validate:data"
   },
   "repository": {
     "type": "git",

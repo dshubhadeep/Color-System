@@ -10,3 +10,12 @@ export const convertHexToRGB = color => {
 
   return `rgb(${r},${g},${b})`
 }
+
+export const getLuminance = rgbColor => {
+  const [r, g, b] = rgbColor
+    .slice(4, rgbColor.length - 1)
+    .split(",")
+    .map(v => parseInt(v))
+
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b
+}

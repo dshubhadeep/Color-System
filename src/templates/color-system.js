@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import PaletteList from "../components/paletteList"
+import QuickAccessBar from "../components/quickAccessBar"
 import SEO from "../components/seo"
 
 const ColorSystem = ({ data }) => {
@@ -21,6 +22,7 @@ const ColorSystem = ({ data }) => {
           </a>
         </div>
       </div>
+      <QuickAccessBar palettes={palettes} />
       <PaletteList palettes={palettes} />
     </Layout>
   )
