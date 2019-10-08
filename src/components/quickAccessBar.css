@@ -2,6 +2,7 @@
   margin: 1rem;
   padding: 1rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
