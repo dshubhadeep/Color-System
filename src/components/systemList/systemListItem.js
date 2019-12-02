@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-const formatName = name => name.split("_").join(" ")
+const formatName = name => name.replace(/_/g, " ")
 
 const SystemListItem = ({ node }) => (
   <>

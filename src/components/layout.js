@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { toast } from "react-toastify"
-import Header from "./header"
+import Navbar from "./navbar"
 
 import "react-toastify/dist/ReactToastify.min.css"
 
@@ -12,7 +12,7 @@ toast.configure({
 const Layout = ({ children }) => {
   return (
     <>
-      <Header />
+      <Navbar />
       <main className="container mx-auto">{children}</main>
     </>
   )

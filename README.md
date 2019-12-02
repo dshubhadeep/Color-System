@@ -16,7 +16,7 @@ npm install
 ### Development
 
 ```bash
-npm run develop
+npm run dev
 ```
 
 Your site is now running at [http://localhost:3000](http://localhost:3000)
