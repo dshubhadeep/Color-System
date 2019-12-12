@@ -11,7 +11,7 @@ const ColorSystem = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={`${name}`} />
+      <SEO title={name} />
       <div className="my-4 flex justify-center items-center">
         <h1 className="text-center text-3xl text-gray-800 font-semibold tracking-wide">
           {name}

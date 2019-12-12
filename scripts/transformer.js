@@ -88,7 +88,7 @@ for (let file of files) {
     return { ...palette, swatch }
   })
 
-  // Sort palete on swatch length (asc)
+  // Sort palette on swatch length (asc)
   palettes.sort((p1, p2) => p1.swatch.length - p2.swatch.length)
 
   json = { ...json, palettes }
