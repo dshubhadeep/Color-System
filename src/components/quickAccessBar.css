@@ -7,7 +7,8 @@
 }
 
 .bar-item-container {
-  width: 5.5rem;
+  display: inline-block;
+  min-width: 5.5rem;
   height: 2.5rem;
   padding: 0.5rem;
   margin: 0.25rem;
@@ -21,7 +22,7 @@
 
 @media screen and (max-width: 768px) {
   .bar-item-container {
-    width: 2.5rem;
+    min-width: 2.5rem;
   }
 
   .bar-item-text {
