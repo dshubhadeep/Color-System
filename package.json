@@ -46,7 +46,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run pre-build && npm run format"
+      "pre-commit": "npm run format"
     }
   },
   "type": "module"

@@ -41,7 +41,7 @@ exports.createPages = async ({ graphql, actions }) => {
   result.data.allDataJson.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
-      component: path.resolve(`./src/templates/color-system.js`),
+      component: path.resolve(`./src/templates/color-system.jsx`),
       context: {
         // Data passed to context is available
         // in page queries as GraphQL variables.
