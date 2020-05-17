@@ -12,7 +12,7 @@ const QuickAccessBar = ({ palettes }) => {
 
   return (
     <div className="qa_container">
-      {list.map(item => {
+      {list.map((item) => {
         return (
           <BarItem color={item.color} bgColor={item.bgColor} key={item.color} />
         )

@@ -6,7 +6,7 @@ import "./systemList.css"
 
 const SystemList = ({ nodes }) => (
   <div className="system-list-container">
-    {nodes.map(el => {
+    {nodes.map((el) => {
       return <SystemListItem key={el.node.parent.id} node={el.node} />
     })}
   </div>

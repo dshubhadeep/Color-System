@@ -1,7 +1,7 @@
 import React from "react"
 import { toast } from "react-toastify"
 
-const copyToClipBoard = e => {
+const copyToClipBoard = (e) => {
   navigator.clipboard.writeText(e.target.textContent)
   toast(`📋 ${e.target.textContent} copied.`, {
     bodyClassName: "text-gray-800",

@@ -6,7 +6,7 @@ import "./paletteList.css"
 
 const PaletteList = ({ palettes }) => (
   <div className="palette-container">
-    {palettes.map(palette => {
+    {palettes.map((palette) => {
       return <PaletteListItem palette={palette} key={palette.color} />
     })}
   </div>

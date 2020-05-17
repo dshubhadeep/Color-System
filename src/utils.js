@@ -1,4 +1,4 @@
-export const convertHexToRGB = color => {
+export const convertHexToRGB = (color) => {
   const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i
   color = color.replace(shorthandRegex, (m, r, g, b) => r + r + g + g + b + b)
 
@@ -11,11 +11,11 @@ export const convertHexToRGB = color => {
   return `rgb(${r},${g},${b})`
 }
 
-export const getLuminance = rgbColor => {
+export const getLuminance = (rgbColor) => {
   const [r, g, b] = rgbColor
     .slice(4, rgbColor.length - 1)
     .split(",")
-    .map(v => parseInt(v))
+    .map((v) => parseInt(v))
 
   return 0.2126 * r + 0.7152 * g + 0.0722 * b
 }

@@ -11,16 +11,16 @@ const filePathArg = process.argv[2]
   ? resolve(process.argv[2])
   : resolve(join("src", "data"))
 
-const getFilePaths = filePathArg => {
+const getFilePaths = (filePathArg) => {
   const stats = statSync(filePathArg)
 
   if (stats.isFile()) return [filePathArg]
 
   const files = readdirSync(filePathArg)
-  return files.map(file => join(filePathArg, file))
+  return files.map((file) => join(filePathArg, file))
 }
 
-const convertHexToRGB = color => {
+const convertHexToRGB = (color) => {
   const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i
   color = color.replace(shorthandRegex, (m, r, g, b) => r + r + g + g + b + b)
 
@@ -33,23 +33,23 @@ const convertHexToRGB = color => {
   return `rgb(${r},${g},${b})`
 }
 
-const convertRGBToHex = color => {
+const convertRGBToHex = (color) => {
   let [r, g, b] = color
     .slice(4, color.length - 1)
     .split(",")
-    .map(c => Number(c).toString(16))
-    .map(c => (c.length == 1 ? `${0}${c}` : c))
+    .map((c) => Number(c).toString(16))
+    .map((c) => (c.length == 1 ? `${0}${c}` : c))
 
   let hex = `#${r}${g}${b}`
 
   return hex.toUpperCase()
 }
 
-const getLuminance = rgbColor => {
+const getLuminance = (rgbColor) => {
   const [r, g, b] = rgbColor
     .slice(4, rgbColor.length - 1)
     .split(",")
-    .map(v => parseInt(v))
+    .map((v) => parseInt(v))
 
   return 0.2126 * r + 0.7152 * g + 0.0722 * b
 }

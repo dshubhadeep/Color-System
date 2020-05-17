@@ -24,7 +24,7 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   query MyQuery {
-    allDataJson {
+    allDataJson(sort: { fields: name, order: ASC }) {
       edges {
         node {
           parent {

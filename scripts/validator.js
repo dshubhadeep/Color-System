@@ -5,13 +5,13 @@ const filePathArg = process.argv[2]
   ? path.resolve(process.argv[2])
   : path.resolve(path.join("src", "data"))
 
-const getFilePaths = filePathArg => {
+const getFilePaths = (filePathArg) => {
   const stats = fs.statSync(filePathArg)
 
   if (stats.isFile()) return [filePathArg]
 
   const files = fs.readdirSync(filePathArg)
-  return files.map(file => path.join(filePathArg, file))
+  return files.map((file) => path.join(filePathArg, file))
 }
 
 const checkKeys = (actualKeys, expectedKeys, padding) => {
@@ -52,7 +52,7 @@ for (let file of files) {
   console.log(` 🔍 Found ${palettes.length} palettes`)
 
   // Palette key check
-  const paletteKeyCheck = palettes.every(palette =>
+  const paletteKeyCheck = palettes.every((palette) =>
     checkKeys(Object.keys(palette), ["color", "swatch"], 2)
   )
 
@@ -61,7 +61,7 @@ for (let file of files) {
   // Swatch check
   const swatchKeyCheck = palettes.every(({ color, swatch }) => {
     console.log(`  🔍 Found ${swatch.length} swatches for color ${color}`)
-    return swatch.every(sw => checkKeys(Object.keys(sw), ["hex", "rgb"], 4))
+    return swatch.every((sw) => checkKeys(Object.keys(sw), ["hex", "rgb"], 4))
   })
 
   if (!swatchKeyCheck) continue
