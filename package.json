@@ -5,25 +5,25 @@
   "version": "0.1.0",
   "author": "Shubhadeep Das <shubhadeep.das2016@vitstudent.ac.in>",
   "dependencies": {
-    "gatsby": "^2.21.33",
+    "gatsby": "^2.24.47",
     "gatsby-plugin-google-fonts": "^1.0.1",
-    "gatsby-plugin-manifest": "^2.4.3",
-    "gatsby-plugin-offline": "^3.2.2",
-    "gatsby-plugin-postcss": "^2.3.1",
-    "gatsby-plugin-react-helmet": "^3.3.1",
-    "gatsby-source-filesystem": "^2.3.3",
-    "gatsby-transformer-json": "^2.4.2",
+    "gatsby-plugin-manifest": "^2.4.23",
+    "gatsby-plugin-offline": "^3.2.23",
+    "gatsby-plugin-postcss": "^2.3.11",
+    "gatsby-plugin-react-helmet": "^3.3.10",
+    "gatsby-source-filesystem": "^2.3.24",
+    "gatsby-transformer-json": "^2.4.11",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-helmet": "^6.0.0",
-    "react-toastify": "^6.0.4"
+    "react-helmet": "^6.1.0",
+    "react-toastify": "^6.0.8"
   },
   "devDependencies": {
-    "autoprefixer": "^9.8.0",
+    "autoprefixer": "^9.8.6",
     "husky": "^4.2.5",
     "prettier": "^2.0.5",
-    "tailwindcss": "^1.4.6"
+    "tailwindcss": "^1.6.2"
   },
   "keywords": [
     "gatsby"
