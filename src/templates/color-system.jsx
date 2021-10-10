@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import PaletteList from "../components/paletteList"
 import QuickAccessBar from "../components/quickAccessBar"
 import SEO from "../components/seo"
+import Scroll from "../components/scroll"
 
 const ColorSystem = ({ data }) => {
   const { name, palettes, url } = data.dataJson
@@ -24,6 +25,7 @@ const ColorSystem = ({ data }) => {
       </div>
       <QuickAccessBar palettes={palettes} />
       <PaletteList palettes={palettes} />
+      <Scroll showBelow={250} />
     </Layout>
   )
 }
