@@ -31,7 +31,7 @@ const ColorSystem = ({ data }) => {
 }
 
 export const query = graphql`
-  query ($slug: String!) {
+  query($slug: String!) {
     dataJson(fields: { slug: { eq: $slug } }) {
       name
       url

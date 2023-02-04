@@ -4,7 +4,6 @@ import ExpandLessIcon from "@material-ui/icons/ExpandLess"
 import IconButton from "@material-ui/core/IconButton"
 
 const useStyles = makeStyles((theme) => ({
-  
   toTop: {
     zIndex: 2,
     position: "fixed",

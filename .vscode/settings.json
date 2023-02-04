@@ -1,0 +1,16 @@
+{
+  "workbench.colorTheme": "Default Light+ Experimental",
+  "workbench.iconTheme": "vscode-icons",
+  "extensions.ignoreRecommendations": true,
+  "editor.fontLigatures": true,
+  "editor.wordWrap": "on",
+  "editor.formatOnSave": true,
+  "editor.fontFamily": "'JetBrains Mono Medium', Consolas, 'Courier New', monospace",
+  "workbench.startupEditor": "none",
+  "editor.fontSize": 16,
+  "explorer.fileNesting.patterns": {
+    ".prettierrc": ".prettierrc.json, .prettierignore"
+  },
+  "explorer.fileNesting.enabled": true,
+  "terminal.integrated.tabs.enabled": false
+}
